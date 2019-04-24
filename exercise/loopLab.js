@@ -45,6 +45,24 @@ function fizzBuzz(){
     }//end for loop
 }
 
+//Another solution for fizzBuzz
+for (let i = 1 ; i; i++){
+    let string =" ";
+    if(i % 3 === 0 && i % 5 === 0 ){
+        string += i ; 
+        string +="Fizzbuzz";
+    }else if(i % 3 === 0){
+        string += i ; 
+        string +="Fizz";
+    }else if( i % 5 === 0 ){
+        string += i ; 
+        string +="Buzz";
+    }
+    if(string !==" "){
+        console.log(string ); 
+    }
+}
+
 /*The even/odd reporter
 Write a for loop that will iterate from 0 to 20. For each iteration, 
 it will check if the current number is even or odd, and report that to 
