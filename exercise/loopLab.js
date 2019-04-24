@@ -110,26 +110,37 @@ Check the results of assignGrade function from the conditionals
 exercise for every value from 60 to 100 - so your log should show 
 "For 89, you got a B. For 90, you got an A.", etc.
 */
-function grade (){
-for (let i = 60 ; i <= 100 ; i +=5){
-if( i == 60 || i <=64){
-	console.log( i + " You got D ") ;
-}else if( i == 65 || i <=69 ){
-	console.log( i + " You got D+ ") ;
-}else if (i == 70 || i <=74 ) {
-	console.log( i + " You got C ") ;
-}else if ( i == 75 || i <=79 ){
-	console.log( i + " You got C+") ;
-}else if(i == 80 || i <=84 ) {
-	console.log( i + " You got B") ;
-}else if(  i == 85 || i <=89) {
-	console.log( i + " You got B+"); 
-}else if( i == 90 || i <= 94){
-	console.log( i + " You got A");
-}else if(  i == 95 || i <=100){
-	console.log( i + " You got A+");
-}else {
-	console.log("Sorry !! you did n't pass ");
-    }
-}//end for loop
+function grade (arg){
+
+    if(isNaN(arg) ){
+        console.log("Please enter a vlid grade !! ")
+    }else{
+        if( arg >=60 && arg <=64){
+            console.log( arg + " You got D ") ;
+        }else if( arg >= 65 && arg <=69 ){
+            console.log(arg + " You got D+ ") ;
+        }else if (arg >= 70 && arg <=74 ) {
+            console.log( arg + " You got C ") ;
+        }else if (arg >= 75 && arg <=79 ){
+            console.log( arg + " You got C+") ;
+        }else if(arg >= 80 && arg <=84 ) {
+            console.log( arg + " You got B") ;
+        }else if(  arg >= 85 && arg <=89) {
+            console.log( arg + " You got B+"); 
+        }else if( arg >= 90 && arg <= 94){
+            console.log( arg + " You got A");
+        }else if(  arg >= 95 && arg <=100){
+            console.log( arg + " You got A+");
+        }else {
+            console.log("Sorry !! you did n't pass ");
+        }
+    
+    }//end else
+    
+    }//end function
+
+/* Loop part */
+for (let i = 60 ; i <= 100 ; i++){
+     grade(i)
 }
+    
